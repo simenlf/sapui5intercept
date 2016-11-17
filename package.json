@@ -1,0 +1,28 @@
+{
+  "name": "sapui5intercept",
+  "version": "1.0.0",
+  "description": "Intercepts SAPUI5 libraries from the frontend to hanaondemand and probably stores them",
+  "main": "index.js",
+  "dependencies": {
+    "node": "^0.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/simenlf/sapui5intercept.git"
+  },
+  "keywords": [
+    "sapui5",
+    "sap",
+    "fiori"
+  ],
+  "author": "Simen Larsen-Frivoll",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/simenlf/sapui5intercept/issues"
+  },
+  "homepage": "https://github.com/simenlf/sapui5intercept#readme"
+}
