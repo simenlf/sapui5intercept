@@ -5,6 +5,6 @@ This script fetches all the relevant files from hanaondemand for a SAPUI5 applic
 Just exchange:
   src="https://sapui5.hana.ondemand.com/resources/sap-ui-core.js"
 with this:
-  src="http://<server/localhost>:8080/sapui5intercept/sap-ui-core.js""
+  src="http://host:8080/sapui5intercept/sap-ui-core.js""
 
 PS: Use this with caution and you obviously need a SAP license to use SAP software. This is just for developers
