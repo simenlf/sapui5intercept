@@ -5,35 +5,36 @@ var writeFile   = require('write');
 var router      = express.Router();
 var port        = process.env.PORT || 8080;
 var app         = express();
-var sapUrl      = "http://www.nettavisen.no";
+var sapUrl      = "https://sapui5.hana.ondemand.com/resources";
 var sapUrlGet   = "";  
 
 router.use(function(req, res, next) {
+    sapUrlGet = sapUrl + req.url;
+    console.log("");
     console.log("- New request -"); 
     console.log("request: " + sapUrlGet); 
-    
-    sapUrlGet = sapUrl + req.url;
-    
-    console.log("request: " + "/sport/fotball/disse-vinner-nettavisen-prisen-2016/3423283013.html");    
+
     requestify.get(sapUrlGet).then(function(response) {
         
         console.log("Server response"); 
         getBody(response);
       }
     );
+
+    var path = "interceptedFiles" + req.url;
     
-    var path = (req.url).substr(1);
-    
-    console.log("path");
+    console.log("path: " + path);
     
     function getBody(response){
         console.log("Started to write file"); 
+        res.header(response.headers);
         writeFile(path, response.body, function(err) {
           if (err){ 
-              console.log(err);
-          } else{ 
+              console.log("error: " + err);
+          } else{
+              
               res.send(response.body);
-              console.log("file written"); 
+              console.log("File written to the OS ok."); 
           }
         });
     };
