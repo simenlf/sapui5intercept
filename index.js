@@ -44,8 +44,6 @@ router.get('/', function(req, res) {
     res.json({ message: 'The API is alive' });   
 });
 
-
-
 app.use('/sapui5intercept', router);
 
 app.listen(port);
