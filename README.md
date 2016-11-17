@@ -8,3 +8,5 @@ with this:
   src="http://host:8080/sapui5intercept/sap-ui-core.js""
 
 PS: Use this with caution and you obviously need a SAP license to use SAP software. This is just for developers
+
+simenlf[AT]gmail.com / simen[AT]skye.no
