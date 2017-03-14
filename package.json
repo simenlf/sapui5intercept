@@ -4,8 +4,12 @@
   "description": "Intercepts SAPUI5 libraries from the frontend to hanaondemand and probably stores them",
   "main": "index.js",
   "dependencies": {
+    "event-stream": "^3.3.4",
     "express": "^4.14.1",
     "node": "^0.0.0",
+    "path": "^0.12.7",
+    "readdirp": "^2.1.0",
+    "request": "^2.81.0",
     "requestify": "^0.2.5",
     "write": "^0.3.2"
   },
